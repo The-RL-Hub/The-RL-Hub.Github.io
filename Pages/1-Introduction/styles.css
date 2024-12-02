@@ -1,4 +1,3 @@
-/* General Reset */
 body {
     font-family: 'Vazirmatn', sans-serif;
     line-height: 1.6;
@@ -9,7 +8,6 @@ body {
     padding-bottom: 50px;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -46,7 +44,6 @@ header nav a:hover {
     color: #f9fafc;
 }
 
-/* Main Layout */
 main {
     display: flex;
     align-items: flex-start;
@@ -54,7 +51,6 @@ main {
     gap: 15px;
 }
 
-/* Sidebar */
 .sidebar {
     width: 200px;
     background: #ffffff;
@@ -122,7 +118,6 @@ main {
     line-height: 1.5;
 }
 
-/* Boxes for Questions, Tips, and Warnings */
 .content .box {
     margin: 15px 0;
     padding: 15px;
@@ -148,7 +143,6 @@ main {
     color: #7f4c10;
 }
 
-/* Code Blocks */
 pre code {
     background: #272822;
     color: #f8f8f2;
@@ -166,7 +160,6 @@ pre {
     padding: 10px;
 }
 
-/* Math Content */
 .math-block {
     background-color: #eef8fc;
     border-left: 4px solid #3498db;
@@ -181,7 +174,6 @@ pre {
     margin: 10px 0;
 }
 
-/* Alerts */
 .alert {
     padding: 12px;
     margin: 10px 0;
@@ -203,7 +195,6 @@ pre {
     background-color: #e74c3c;
 }
 
-/* Tables */
 .table-container table {
     width: 100%;
     border-collapse: collapse;
@@ -222,7 +213,6 @@ pre {
     color: white;
 }
 
-/* Buttons */
 .button {
     display: inline-block;
     padding: 8px 15px;
@@ -238,7 +228,6 @@ pre {
     background-color: #871428;
 }
 
-/* Footer */
 .social-footer {
     background-color: #333333;
     padding: 12px 0;
@@ -265,18 +254,39 @@ html {
     scroll-behavior: smooth;
 }
 .image-container {
-    text-align: center; /* Align the image and caption to the center */
-    margin: 20px auto; /* Center the container and add spacing around it */
+    text-align: center;
+    margin: 20px auto;
 }
 
 .image-container img {
-    max-width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain the aspect ratio */
+    max-width: 100%;
+    height: auto; 
     border-radius: 8px; 
-    display: inline-block; /* Ensure the image is inline for centering */
+    display: inline-block; 
 }
 
-/* Responsive Design */
+.next-section {
+    text-align: center;
+    margin-top: 40px; 
+}
+
+.next-section .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a31f34;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.next-section .button:hover {
+    background-color: #871428;
+}
+
+
 @media (max-width: 768px) {
     main {
         flex-direction: column;
