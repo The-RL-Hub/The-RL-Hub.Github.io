@@ -264,7 +264,17 @@ pre {
 html {
     scroll-behavior: smooth;
 }
+.image-container {
+    text-align: center; /* Align the image and caption to the center */
+    margin: 20px auto; /* Center the container and add spacing around it */
+}
 
+.image-container img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; 
+    display: inline-block; /* Ensure the image is inline for centering */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
