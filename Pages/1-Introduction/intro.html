@@ -31,6 +31,7 @@
                 <li><a href="#rl-overview">Reinforcement Learning چیه؟</a></li>
                 <li><a href="#rl-vs-supervised">RL و تفاوت با Supervised و Unsupervised Learning</a></li>
                 <li><a href="#rl-examples">مثال‌هایی از RL در عمل</a></li>
+                <li><a href="#rl-elements">المنت های RL</a></li>
             </ul>
         </aside>
     
@@ -47,7 +48,7 @@
             
             <div class="image-container">
                 <img src="Pictures/1.jpg" alt="A Robot" style="width: 50%; height: auto;">
-                <p class="image-caption">شکل ۱: تصویری از برگرفته از کورس CS188 دانشگاه برکلی<p>
+                <p class="image-caption">شکل 1: تصویری از برگرفته از کورس CS188 دانشگاه برکلی<p>
             </div>
     
             <div class="box box-question">
@@ -128,6 +129,43 @@
                 <li><strong>کنترل رباتیک:</strong> رباتایی که تو کارخونه قطعاتو مونتاژ می‌کنن، با استفاده از RL حرکات خودشونو بهبود می‌دن و دقتو بالا می‌برن و مصرف انرژی رو کم می‌کنن.</li>
                 <li><strong>بازی‌ها:</strong> از AlphaGo که تو بازی Go استاد شد گرفته تا ایجنتای RL که تو بازیای پیچیده ویدیویی مهارت پیدا کردن، RL پتانسیلشو برای حل مسائل سخت با یادگیری مستقیم از تجربه نشون داده.</li>
             </ul>
+
+
+            <hr>
+
+            <h2 id="rl-elements">المنت های RL</h2>
+            <p>
+                Reinforcement Learning بدیهتاً چندتا المنت اصلی داره و این المنتا تعیین می‌کنن ایجنت چجوری یاد بگیره، خودش رو وفق بده و تو یه محیط رفتار کنه. این عناصر شامل Policy، Reward Signal، Value Function و به‌صورت اختیاری Model ای برای Environment هستن. هرکدوم از اینا یه نقش مشخص دارن که باعث می‌شن ایجنت درست کار کنه و بهتر یاد بگیره.
+            </p>
+
+            <div class="image-container">
+                <img src="Pictures/2.png" alt="full scheme" style="width: 40%; height: auto;">
+                <p class="image-caption">شکل 2: چرخه RL و چارچوب تعامل Agent و Environment<p>
+            </div>
+
+
+            <h3>Value Function</h3>
+            <p>
+                Value Function نشون می‌ده چقدر خوبه که تو یه state خاص باشیم، با در نظر گرفتن پاداش‌های فوری و آینده. این تابع به ایجنت کمک می‌کنه روی کارهایی تمرکز کنه که شاید الان سودی نداشته باشن، ولی تو بلندمدت مفید باشن.
+            </p>
+
+            <h4>ویژگی‌های Value Function</h4>
+            <ul>
+                <li><strong>نگاه بلندمدت:</strong> Value پاداش‌های جمع‌شده تو طول زمان رو در نظر می‌گیره، نه فقط پاداش بعدی رو.</li>
+                <li><strong>پویا بودن:</strong> Value‌ها با گذر زمان و تجربه ایجنت به‌روز می‌شن.</li>
+                <li><strong>راهنمای بهتر شدن Policy:</strong> ایجنت از Value Function برای تصمیم‌گیری‌های بهتر استفاده می‌کنه.</li>
+            </ul>
+
+            <div class="box box-question">
+                <strong>یه سؤال:</strong> تو زندگی، پیش میاد که منافع بلندمدت رو به رضایت کوتاه‌مدت ترجیح بدی؟ این شبیه نحوه استفاده ایجنت از Value Function نیست؟
+            </div>
+
+            <div class="box box-tip">
+                <strong>شهود:</strong> فرض کن داری تو یه هزارتو راه می‌ری. حتی اگه یه مسیر مستقیم به خروجی نرسه (پاداش فوری)، ممکنه تو رو به نقطه‌ای نزدیک‌تر به خروجی برسونه (پاداش‌های آینده). ارزش بودن تو یه نقطه خاص از هزارتو به این بستگی داره که چقدر <strong>امیدوارکننده‌ست</strong> برای رسیدن به خروجی.
+            </div>
+            
+            
+
             <div class="next-section">
                 <a href="#next-section" class="button">بخش بعدی</a>
             </div>
