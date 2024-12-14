@@ -15,7 +15,7 @@
     <header>
         <div class="logo">
             <img src="Pictures/logo.png" alt="Logo">
-            <span>مقدمه</span>
+            <span>مساله Multi-armed bandit </span>
         </div>
         <nav>
             <a href="https://the-rl-hub.github.io/">خانه</a>
@@ -27,15 +27,32 @@
     <main>
         <aside class="sidebar">
             <ul>
-                <li><a href="#p-one">بخش 1</a></li>
-                <li><a href="#p-two">بخش 2</a></li>
+                <li><a href="#non-associative">یه فرم ساده تر</a></li>
             </ul>
         </aside>
     
         <section class="content">
             <h1>مساله Multi-armed bandit</h1>
             <hr>
-            
+    
+            <h2 id="non-associative">یه فرم ساده تر </h2>
+    
+            <p>
+                همونطوری که تو chapter قبل هم گفتیم تو reinforcement learning، فیدبک evaluative خیلی نقش مهمی تو شکل دادن رفتار داره. برعکس supervised learning، که فیدبک instructive می‌ده و مستقیم می‌گه کار درست چیه، فیدبک evaluative فقط نشون می‌ده یه کار چقدر خوب بوده بعد از اینکه انجام شده. این فرق اصلیشونه: تو supervised learning، یادگیری از مثالای درستیه که یه مربی بیرونی می‌ده، ولی تو reinforcement learning، قضیه اینه که باید با آزمون و خطا بفهمی چه کارایی بهتر جواب می‌دن و پاداش بیشتری می‌دن.
+            </p>
+
+            <p>
+                تو فصل قبل گفتیم فیدبک instructive دقیقاً بهت می‌گه چی درسته، مثلاً مثل دسته‌بندی عکس‌ها یا پیش‌بینی نتایج. ولی فیدبک evaluative این‌جوری نیست که مستقیم بگه چیکار کنی؛ یه سیگنال عددی (پاداش) می‌ده که کیفیت کارت رو بر اساس نتیجه‌ش می‌سنجه. مثلاً به جای اینکه به ایجنت بگه "برو چپ"، اگه رفتن به چپ باعث بشه به هدف برسه، یه پاداش (مثلاً +1) می‌گیره، اگه نه، هیچی.
+            </p>
+            <div class="image-container">
+                <img src="Pictures/1.jpg" alt="A Robot" style="width: 50%; height: auto;">
+                <p class="image-caption">شکل 1: تصویری از برگرفته از کورس CS188 دانشگاه برکلی<p>
+            </div>
+
+            <p>
+                به طور کلی هم الآن برای درک بهتر action ها و نحوه کارکرد سیستم reward و اینا میایم و تو این فصل مسئله Multi-Armed Bandit رو معرفی می‌کنیم، که ساده‌ترین framework تصمیم‌گیری که میشه بررسی کنیم. در واقع میایم و فرض میکنیم state به خصوصی وجود نداره و خب حالا action هامون رو انتخاب میکنیم. این فرض کار رو ساده‌تر می‌کنه چون فرض می‌کنه ارزش هر کار مستقل از وضعیت یا حالتیه که ایجنت توشه. این باعث می‌شه راحت‌تر بفهمیم evaluative feedback چجوری کار می‌کنه و چجوری ایجنت بین exploration (امتحان کارای جدید برای اطلاعات بیشتر) و exploitation (انتخاب بهترین کار با توجه به اطلاعات فعلی برای پاداش بیشتر) تعادل برقرار می‌کنه.
+            </p>
+
 
             <div class="next-section">
                 <a href="#next-section" class="button">بخش بعدی</a>
