@@ -1,3 +1,4 @@
+/* General Reset */
 body {
     font-family: 'Vazirmatn', sans-serif;
     line-height: 1.6;
@@ -8,6 +9,7 @@ body {
     padding-bottom: 50px;
 }
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -44,6 +46,7 @@ header nav a:hover {
     color: #f9fafc;
 }
 
+/* Main Layout */
 main {
     display: flex;
     align-items: flex-start;
@@ -51,6 +54,7 @@ main {
     gap: 15px;
 }
 
+/* Sidebar */
 .sidebar {
     width: 200px;
     background: #ffffff;
@@ -253,6 +257,7 @@ pre {
 html {
     scroll-behavior: smooth;
 }
+
 .image-container {
     text-align: center;
     margin: 20px auto;
@@ -286,16 +291,15 @@ html {
     background-color: #871428;
 }
 
-
+/* Hiding Sidebar for Smaller Screens */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
     }
     .sidebar {
-        width: 100%;
-        height: auto;
+        display: none; /* Hide the sidebar completely */
     }
     .content {
-        flex: none;
+        flex: none; /* Allow content to take full width */
     }
 }
